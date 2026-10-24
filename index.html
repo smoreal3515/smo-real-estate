@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SMO REAL ESTATE</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f5f7fa;
+      color: #222;
+    }
+
+    /* HEADER */
+    header {
+      background: #0b1f3a;
+      color: white;
+      padding: 16px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffb300;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 40px 20px;
+
+      background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff9800;
+      color: white;
+      padding: 14px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #e68900;
+    }
+
+    /* SECTION */
+    .section {
+      max-width: 1150px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      color: #0b1f3a;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    /* PROPERTY CARDS */
+    .properties {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,.12);
+    }
+
+    .card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      color: #0b1f3a;
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      color: #e65100;
+      font-size: 21px;
+      font-weight: bold;
+      margin: 14px 0;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .service {
+      background: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,.08);
+    }
+
+    .service .icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .service h3 {
+      color: #0b1f3a;
+      margin-bottom: 10px;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: #0b1f3a;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .contact h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      margin: 8px 0;
+      font-size: 17px;
+    }
+
+    .contact-buttons {
+      margin-top: 25px;
+    }
+
+    .whatsapp {
+      background: #25D366;
+      margin-left: 10px;
+    }
+
+    .whatsapp:hover {
+      background: #1da851;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #071426;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 700px) {
+
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav a {
+        margin: 0 6px;
+        font-size: 14px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .whatsapp {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="logo">
+      🏠 SMO REAL ESTATE
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#properties">Properties</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <div>
+
+      <h1>SMO REAL ESTATE</h1>
+
+      <p>
+        Find Your Dream Property
+      </p>
+
+      <a href="#properties" class="btn">
+        View Properties
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROPERTIES -->
+  <section class="section" id="properties">
+
+    <div class="section-title">
+      <h2>Featured Properties</h2>
+      <p>Buy • Sell • Rent</p>
+    </div>
+
+    <div class="properties">
+
+      <!-- PROPERTY 1 -->
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80">
+
+        <div class="card-content">
+
+          <h3>Beautiful House</h3>
+
+          <p>
+            3 BHK • Residential Property
+          </p>
+
+          <div class="price">
+            ₹45 Lakhs
+          </div>
+
+          <a href="#contact" class="btn">
+            Enquire Now
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROPERTY 2 -->
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80">
+
+        <div class="card-content">
+
+          <h3>Residential Land</h3>
+
+          <p>
+            200 Sq. Yards • Prime Location
+          </p>
+
+          <div class="price">
+            ₹30 Lakhs
+          </div>
+
+          <a href="#contact" class="btn">
+            Enquire Now
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROPERTY 3 -->
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80">
+
+        <div class="card-content">
+
+          <h3>Luxury Villa</h3>
+
+          <p>
+            4 BHK • Premium Property
+          </p>
+
+          <div class="price">
+            ₹85 Lakhs
+          </div>
+
+          <a href="#contact" class="btn">
+            Enquire Now
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+
+    <div class="section-title">
+      <h2>Our Services</h2>
+    </div>
+
+    <div class="services">
+
+      <div class="service">
+        <div class="icon">🏠</div>
+        <h3>Buy Property</h3>
+        <p>Find the right property for your family.</p>
+      </div>
+
+      <div class="service">
+        <div class="icon">💰</div>
+        <h3>Sell Property</h3>
+        <p>List and sell your property easily.</p>
+      </div>
+
+      <div class="service">
+        <div class="icon">🔑</div>
+        <h3>Rental Properties</h3>
+        <p>Find houses and properties for rent.</p>
+      </div>
+
+      <div class="service">
+        <div class="icon">📍</div>
+        <h3>Site Visits</h3>
+        <p>Contact us to arrange a property visit.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+
+    <h2>Contact SMO REAL ESTATE</h2>
+
+    <p>For property details and site visits</p>
+
+    <p>📞 Call us today</p>
+
+    <div class="contact-buttons">
+
+      <!-- PHONE NUMBER CHANGE HERE -->
+      <a
+        class="btn"
+        href="tel:+919999999999">
+        📞 Call Now
+      </a>
+
+      <!-- WHATSAPP NUMBER CHANGE HERE -->
+      <a
+        class="btn whatsapp"
+        href="https://wa.me/919999999999">
+        💬 WhatsApp
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    © 2026 SMO REAL ESTATE.
+    All Rights Reserved.
+
+  </footer>
+
+</body>
+</html>
